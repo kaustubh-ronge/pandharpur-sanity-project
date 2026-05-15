@@ -101,8 +101,36 @@ const temple = {
       type: "array",
       of: [{ type: "image", options: { hotspot: true } }],
     },
+    {
+      name: 'seoTitle',
+      title: 'SEO Title',
+      type: 'string',
+      description: 'Optional. Custom title for search engines. Overrides the default temple name.',
+      group: 'seo',
+    },
+    {
+      name: 'seoDescription',
+      title: 'SEO Description',
+      type: 'text',
+      rows: 3,
+      description: 'Optional. Custom meta description for search engines. Should be between 150-160 characters. Overrides the default description.',
+      group: 'seo',
+    },
+    {
+      name: 'seoKeywords',
+      title: 'SEO Keywords',
+      type: 'string',
+      description: 'Optional. Comma-separated keywords for search engines.',
+      group: 'seo',
+    },
   ],
-  icon: () => '🕉️', // Using an Om symbol for the icon
+  groups: [
+    {
+      name: 'seo',
+      title: 'SEO & Metadata',
+    },
+  ],
+  icon: () => '🕉️',
 };
 
 export default temple;
